@@ -710,6 +710,7 @@ footer .blue { color: var(--blue); }
 }
 
 /* ===== RESPONSIVE ===== */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
     nav { padding: 0 24px; }
     .nav-links { gap: 20px; }
@@ -719,9 +720,31 @@ footer .blue { color: var(--blue); }
     .about-img-wrap::before { display: none; }
     .skills-categories { grid-template-columns: 1fr; gap: 36px; }
     .timeline { padding-left: 36px; }
+    .cert-grid { grid-template-columns: 1fr 1fr; }
+    .contact-card { padding: 40px 28px; }
 }
+
 @media (max-width: 600px) {
     .hero-name { font-size: 36px; }
     .nav-links { display: none; }
-}
+    .section-wrap { padding: 56px 18px; }
+    .timeline { padding-left: 28px; }
+    .timeline-card { padding: 24px 20px; }
+    .cert-grid { grid-template-columns: 1fr; }
+    .contact-card { padding: 32px 20px; }
+    .hero-cta { flex-direction: column; align-items: center; }
+    .btn-primary, .btn-secondary { width: 100%; text-align: center; }
 
+    /* Carousel shrinks on mobile */
+    .carousel { padding: 0 40px; }
+    .carousel-track { width: 100%; }
+    .carousel-slides { height: 200px; }
+    .carousel-slides img {
+        min-width: 100%;
+        width: 100%;
+        height: 200px;
+    }
+    .carousel-placeholder { min-width: 100%; height: 200px; }
+    .carousel-prev { left: 4px; }
+    .carousel-next { right: 4px; }
+}
