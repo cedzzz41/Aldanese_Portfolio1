@@ -415,7 +415,8 @@ document.querySelectorAll('[data-carousel]').forEach(carousel => {
 
     function goTo(n) {
         current = (n + items.length) % items.length;
-      slides.style.transform = `translate3d(-${current * 225}px, 0, 0)`;
+      const slideWidth = slides.children[0].getBoundingClientRect().width;
+slides.style.transform = `translate3d(-${current * slideWidth}px, 0, 0)`;
         dotsWrap.querySelectorAll('.carousel-dot').forEach((d, i) =>
             d.classList.toggle('active', i === current));
     }
